@@ -6,11 +6,11 @@ const { resolve } = require('path')
 const { omit } = require('lodash')
 const fs = require('fs')
 
-const metascraper = require('metascraper')([require('..')()])
+const metascraper = require('@plaa/metascraper')([require('..')()])
 
 const readFile = promisify(fs.readFile)
 
-describe('metascraper-logo-favicon', () => {
+describe('@plaa/metascraper-logo-favicon', () => {
   it('create an absolute favicon url if the logo is not present', async () => {
     const html = await readFile(resolve(__dirname, 'fixtures/input.html'))
     const url =

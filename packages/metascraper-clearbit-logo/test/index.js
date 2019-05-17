@@ -2,10 +2,10 @@
 
 const should = require('should')
 
-const metascraper = require('metascraper')([require('..')()])
+const metascraper = require('@plaa/metascraper')([require('..')()])
 const { apiUrl } = require('..')
 
-describe('metascraper-clearbit-logo', () => {
+describe('@plaa/metascraper-clearbit-logo', () => {
   it('returns when is possible resolve logo', async () => {
     const url = 'https://facebook.com'
     const meta = await metascraper({ url })
@@ -19,9 +19,7 @@ describe('metascraper-clearbit-logo', () => {
   })
 
   it('compose urls using opts params', () => {
-    should(apiUrl('https://facebook.com')).be.equal(
-      'https://logo.clearbit.com/facebook.com'
-    )
+    should(apiUrl('https://facebook.com')).be.equal('https://logo.clearbit.com/facebook.com')
     should(apiUrl('https://facebook.com', { format: 'png' })).be.equal(
       'https://logo.clearbit.com/facebook.com?format=png'
     )

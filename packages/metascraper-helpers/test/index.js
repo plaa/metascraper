@@ -16,7 +16,7 @@ const {
   url
 } = require('..')
 
-describe('metascraper-helpers', () => {
+describe('@plaa/metascraper-helpers', () => {
   it('.url', () => {
     should(url()).be.null()
     should(url(null)).be.null()

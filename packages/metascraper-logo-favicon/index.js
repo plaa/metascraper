@@ -2,7 +2,7 @@
 
 const { flow, first, toNumber, split, chain, concat } = require('lodash')
 const { resolve: resolveUrl, URL } = require('url')
-const { url: urlFn } = require('@metascraper/helpers')
+const { url: urlFn } = require('@plaa/metascraper-helpers')
 const got = require('got')
 
 const getSize = flow([str => split(str, 'x'), first, toNumber])

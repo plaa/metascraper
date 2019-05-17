@@ -1,7 +1,7 @@
 /* global codecopy */
 
 window.$docsify = {
-  name: 'metascraper',
+  name: '@plaa/metascraper',
   repo: 'microlinkhq/metascraper',
   maxLevel: 3,
   executeScript: true,

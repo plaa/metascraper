@@ -1,5 +1,5 @@
 {
-  "name": "metascraper",
+  "name": "@plaa/metascraper",
   "homepage": "https://github.com/microlinkhq/metascraper#readme",
   "version": "",
   "author": {
@@ -97,6 +97,9 @@
     "ignore": [
       "static/*.{js, css}"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "standard": {
     "env": [

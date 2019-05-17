@@ -1,9 +1,12 @@
 {
-  "name": "metascraper-youtube",
+  "name": "@plaa/metascraper-youtube",
   "description": "metascraper integration with YouTube",
   "homepage": "https://nicedoc.io/microlinkhq/metascraper/packages/metascraper-youtube",
   "version": "5.3.0",
   "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/microlinkhq/metascraper-youtube.git"
@@ -12,12 +15,12 @@
     "url": "https://github.com/microlinkhq/metascraper-youtube/issues"
   },
   "keywords": [
-    "metascraper",
+    "@plaa/metascraper",
     "video",
     "youtube"
   ],
   "dependencies": {
-    "@metascraper/helpers": "^5.3.0",
+    "@plaa/metascraper-helpers": "^5.3.0",
     "get-video-id": "~3.1.1",
     "is-reachable": "~3.1.0",
     "p-locate": "~4.1.0"

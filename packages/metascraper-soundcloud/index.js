@@ -1,12 +1,9 @@
 'use strict'
 
-const { $filter, title } = require('@metascraper/helpers')
+const { $filter, title } = require('@plaa/metascraper-helpers')
 
 module.exports = () => ({
-  author: [
-    ({ htmlDom: $, meta, url: baseUrl }) =>
-      title($filter($, $('.soundTitle__username')))
-  ],
+  author: [({ htmlDom: $, meta, url: baseUrl }) => title($filter($, $('.soundTitle__username')))],
   description: [
     ({ htmlDom: $, meta, url: baseUrl }) =>
       title(

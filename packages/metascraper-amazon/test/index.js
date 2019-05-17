@@ -9,25 +9,23 @@ const fs = require('fs')
 
 const readFile = promisify(fs.readFile)
 
-const metascraper = require('metascraper')([
+const metascraper = require('@plaa/metascraper')([
   require('..')(),
-  require('metascraper-author')(),
-  require('metascraper-date')(),
-  require('metascraper-description')(),
-  require('metascraper-image')(),
-  require('metascraper-lang')(),
-  require('metascraper-logo')(),
-  require('metascraper-publisher')(),
-  require('metascraper-title')(),
-  require('metascraper-url')()
+  require('@plaa/metascraper-author')(),
+  require('@plaa/metascraper-date')(),
+  require('@plaa/metascraper-description')(),
+  require('@plaa/metascraper-image')(),
+  require('@plaa/metascraper-lang')(),
+  require('@plaa/metascraper-logo')(),
+  require('@plaa/metascraper-publisher')(),
+  require('@plaa/metascraper-title')(),
+  require('@plaa/metascraper-url')()
 ])
 
-describe('metascraper-amazon', () => {
+describe('@plaa/metascraper-amazon', () => {
   describe('amazon.co.uk', () => {
     it('product url', async () => {
-      const html = await readFile(
-        resolve(__dirname, 'fixtures/amazon-co-uk/product-url.html')
-      )
+      const html = await readFile(resolve(__dirname, 'fixtures/amazon-co-uk/product-url.html'))
       const url =
         'https://www.amazon.co.uk/Vegetable-Perfection-tasty-recipes-shoots/dp/1849757097/ref=asap_bc?ie=UTF8'
       const metadata = omit(await metascraper({ html, url }), ['date'])
@@ -37,9 +35,7 @@ describe('metascraper-amazon', () => {
 
   describe('amazon.com', () => {
     it('ansi url', async () => {
-      const html = await readFile(
-        resolve(__dirname, 'fixtures/amazon-com/ansi-url.html')
-      )
+      const html = await readFile(resolve(__dirname, 'fixtures/amazon-com/ansi-url.html'))
       const url = 'https://www.amazon.com/gp/product/B0057OC5O8/'
       const metadata = await metascraper({ html, url })
 
@@ -49,9 +45,7 @@ describe('metascraper-amazon', () => {
     })
 
     it('product url', async () => {
-      const html = await readFile(
-        resolve(__dirname, 'fixtures/amazon-com/product-url.html')
-      )
+      const html = await readFile(resolve(__dirname, 'fixtures/amazon-com/product-url.html'))
       const url =
         'https://www.amazon.com/The-Whole-Truth-Shaw-Book-ebook/dp/B0011UCPM4/ref=pd_zg_rss_ts_b_17_6?ie=UTF8&tag=recomshop-22'
       const metadata = await metascraper({ html, url })
@@ -64,9 +58,7 @@ describe('metascraper-amazon', () => {
 
   describe('amazon.es', () => {
     it('product url', async () => {
-      const html = await readFile(
-        resolve(__dirname, 'fixtures/amazon-es/product-url.html')
-      )
+      const html = await readFile(resolve(__dirname, 'fixtures/amazon-es/product-url.html'))
       const url =
         'https://www.amazon.es/aspirador-Excellence-Programable-limpieza-Silencioso/dp/B01MUGXRT9'
       const metadata = await metascraper({ html, url })

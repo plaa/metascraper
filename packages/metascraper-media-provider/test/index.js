@@ -4,23 +4,23 @@ const snapshot = require('snap-shot')
 const should = require('should')
 const isCI = require('is-ci')
 
-const metascraper = require('metascraper')([
+const metascraper = require('@plaa/metascraper')([
   require('..')(),
-  require('metascraper-publisher')(),
-  require('metascraper-author')(),
-  require('metascraper-date')(),
-  require('metascraper-description')(),
-  require('metascraper-image')(),
-  require('metascraper-lang')(),
-  require('metascraper-logo')(),
-  require('metascraper-title')(),
-  require('metascraper-url')()
+  require('@plaa/metascraper-publisher')(),
+  require('@plaa/metascraper-author')(),
+  require('@plaa/metascraper-date')(),
+  require('@plaa/metascraper-description')(),
+  require('@plaa/metascraper-image')(),
+  require('@plaa/metascraper-lang')(),
+  require('@plaa/metascraper-logo')(),
+  require('@plaa/metascraper-title')(),
+  require('@plaa/metascraper-url')()
 ])
 
 const { getVideo } = require('..')
-const { extension, isUrl } = require('@metascraper/helpers')
+const { extension, isUrl } = require('@plaa/metascraper-helpers')
 
-describe('metascraper-media-provider', () => {
+describe('@plaa/metascraper-media-provider', () => {
   describe('.getVideo', () => {
     it('twitter', () => {
       snapshot(getVideo(require('./fixtures/video/twitter.json')))

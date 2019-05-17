@@ -11,7 +11,7 @@ const {
   lang,
   publisher,
   protocol: protocolFn
-} = require('@metascraper/helpers')
+} = require('@plaa/metascraper-helpers')
 
 const createGetMedia = require('./get-media')
 

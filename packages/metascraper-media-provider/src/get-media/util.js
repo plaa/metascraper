@@ -1,6 +1,6 @@
 'use strict'
 
-const debug = require('debug')('metascraper-media-provider:util')
+const debug = require('debug')('@plaa/metascraper-media-provider:util')
 const luminatiTunnel = require('luminati-tunnel')
 const { isEmpty } = require('lodash')
 const { URL } = require('url')

@@ -1,11 +1,6 @@
 'use strict'
 
-const {
-  isMime,
-  url: urlFn,
-  isVideoUrl,
-  extension
-} = require('@metascraper/helpers')
+const { isMime, url: urlFn, isVideoUrl, extension } = require('@plaa/metascraper-helpers')
 const { chain } = require('lodash')
 
 /**
@@ -33,8 +28,7 @@ const wrapVideo = createWrapper((domNodes, url) => {
   return isVideoUrl(urlValue) && urlValue
 })
 
-const withContentType = (url, contentType) =>
-  isMime(contentType, 'video') ? url : false
+const withContentType = (url, contentType) => (isMime(contentType, 'video') ? url : false)
 
 /**
  * Rules.
@@ -46,12 +40,8 @@ module.exports = () => ({
     wrapVideo($ => $('meta[property="og:video:secure_url"]').attr('content')),
     wrapVideo($ => $('meta[property="og:video"]').attr('content')),
     wrapVideo($ => {
-      const contentType = $(
-        'meta[property="twitter:player:stream:content_type"]'
-      ).attr('content')
-      const streamUrl = $('meta[property="twitter:player:stream"]').attr(
-        'content'
-      )
+      const contentType = $('meta[property="twitter:player:stream:content_type"]').attr('content')
+      const streamUrl = $('meta[property="twitter:player:stream"]').attr('content')
       return contentType ? withContentType(streamUrl, contentType) : streamUrl
     }),
     wrapVideo($ => $('video').get()),

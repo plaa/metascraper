@@ -1,6 +1,6 @@
 'use strict'
 
-const metascraper = require('metascraper')([require('metascraper-title')()])
+const metascraper = require('@plaa/metascraper')([require('@plaa/metascraper-title')()])
 const snapshot = require('snap-shot')
 const should = require('should')
 

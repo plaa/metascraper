@@ -1,6 +1,6 @@
 'use strict'
 
-const { $filter, url: urlFn, isString, isArray } = require('@metascraper/helpers')
+const { $filter, url: urlFn, isString, isArray } = require('@plaa/metascraper-helpers')
 
 /**
  * Wrap a rule with validation and formatting logic.

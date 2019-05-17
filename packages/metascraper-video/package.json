@@ -1,9 +1,12 @@
 {
-  "name": "metascraper-video",
+  "name": "@plaa/metascraper-video",
   "description": "Get video property from HTML markup",
   "homepage": "https://nicedoc.io/microlinkhq/metascraper/packages/metascraper-video",
   "version": "5.3.0",
   "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-video"
@@ -12,11 +15,11 @@
     "url": "https://github.com/microlinkhq/metascraper/issues"
   },
   "keywords": [
-    "metascraper",
+    "@plaa/metascraper",
     "video"
   ],
   "dependencies": {
-    "@metascraper/helpers": "^5.3.0",
+    "@plaa/metascraper-helpers": "^5.3.0",
     "lodash": "~4.17.11"
   },
   "devDependencies": {

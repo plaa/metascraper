@@ -1,6 +1,6 @@
 'use strict'
 
-const { url: urlFn, $filter, titleize } = require('@metascraper/helpers')
+const { url: urlFn, $filter, titleize } = require('@plaa/metascraper-helpers')
 const { URL } = require('url')
 const { chain } = require('lodash')
 
@@ -40,9 +40,7 @@ const wrap = createWrap((url, value) => value)
 const wrapUrl = createWrap((url, value) => urlFn(value, { url }))
 
 module.exports = () => ({
-  lang: [
-    ({ htmlDom: $, meta, url }) => isAmazonUrl(url) && getDomainLanguage(url)
-  ],
+  lang: [({ htmlDom: $, meta, url }) => isAmazonUrl(url) && getDomainLanguage(url)],
   author: [
     wrap($ => titleize($('.contributorNameID').text())),
     wrap($ => titleize($('#bylineInfo').text())),

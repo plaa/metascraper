@@ -1,7 +1,7 @@
 'use strict'
 
 const should = require('should')
-const metascraper = require('metascraper')([require('..')()])
+const metascraper = require('@plaa/metascraper')([require('..')()])
 
 const getHtml = title => `
 <!DOCTYPE html>
@@ -17,7 +17,7 @@ const getHtml = title => `
 </html>
 `
 
-describe('metascraper-publisher', () => {
+describe('@plaa/metascraper-publisher', () => {
   describe('from title', async () => {
     ;[
       'Murcia | Wikipedia',

@@ -23,9 +23,7 @@ module.exports = [
           (results.general && results.general.description) ||
           null,
         image:
-          (results.openGraph &&
-            results.openGraph.image &&
-            results.openGraph.image.url) ||
+          (results.openGraph && results.openGraph.image && results.openGraph.image.url) ||
           (results.schemaOrg &&
             results.schemaOrg.items[0].properties &&
             results.schemaOrg.items[0].properties.image[0] &&
@@ -50,7 +48,7 @@ module.exports = [
    */
 
   {
-    name: 'metascraper',
+    name: '@plaa/metascraper',
 
     scrape (Module, url, html) {
       return Module({ html, url })
@@ -119,12 +117,8 @@ module.exports = [
           (results.success && results.data.twitterDescription) ||
           null,
         image:
-          (results.success &&
-            results.data.ogImage &&
-            results.data.ogImage.url) ||
-          (results.success &&
-            results.data.twitterImage &&
-            results.data.twitterImage.url) ||
+          (results.success && results.data.ogImage && results.data.ogImage.url) ||
+          (results.success && results.data.twitterImage && results.data.twitterImage.url) ||
           null,
         publisher:
           (results.success && results.data.ogSiteName) ||

@@ -1,6 +1,6 @@
 'use strict'
 
-const { isUrl } = require('@metascraper/helpers')
+const { isUrl } = require('@plaa/metascraper-helpers')
 const whoops = require('whoops')
 
 const mergeRules = require('./merge-rules')

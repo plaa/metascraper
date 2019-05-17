@@ -2,9 +2,9 @@
 
 const snapshot = require('snap-shot')
 
-const metascraper = require('metascraper')([require('metascraper-audio')()])
+const metascraper = require('@plaa/metascraper')([require('@plaa/metascraper-audio')()])
 
-describe('metascraper-audio', () => {
+describe('@plaa/metascraper-audio', () => {
   it('og:audio', async () => {
     const html = `<meta property="og:audio" content="https://browserless.js.org/static/demo.mp3">`
     const url = 'https://browserless.js.org'

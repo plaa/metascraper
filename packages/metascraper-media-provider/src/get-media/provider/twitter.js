@@ -1,8 +1,8 @@
 'use strict'
 
-const debug = require('debug')('metascraper-media-provider:twitter')
+const debug = require('debug')('@plaa/metascraper-media-provider:twitter')
 const { reduce, set, get, chain } = require('lodash')
-const { protocol } = require('@metascraper/helpers')
+const { protocol } = require('@plaa/metascraper-helpers')
 
 const got = require('got')
 const { expirableCounter, getAgent, getTweetId, proxyUri } = require('../util')

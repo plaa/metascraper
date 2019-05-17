@@ -1,6 +1,6 @@
 'use strict'
 
-const { publisher } = require('@metascraper/helpers')
+const { publisher } = require('@plaa/metascraper-helpers')
 
 const REGEX_RSS = /^(.*?)\s[-|]\satom$/i
 const REGEX_TITLE = /^.*?[-|]\s+(.*)$/

@@ -1,6 +1,6 @@
 'use strict'
 
-const { lang } = require('@metascraper/helpers')
+const { lang } = require('@plaa/metascraper-helpers')
 
 const wrap = rule => ({ htmlDom }) => {
   const value = rule(htmlDom)

@@ -1,9 +1,12 @@
 {
-  "name": "metascraper-readability",
+  "name": "@plaa/metascraper-readability",
   "description": "A Readability connector for metascraper",
   "homepage": "https://nicedoc.io/microlinkhq/metascraper/packages/metascraper-readability",
   "version": "5.3.0",
   "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-readability"
@@ -12,18 +15,18 @@
     "url": "https://github.com/microlinkhq/metascraper/issues"
   },
   "keywords": [
-    "metascraper",
+    "@plaa/metascraper",
     "url"
   ],
   "dependencies": {
-    "@metascraper/helpers": "^5.3.0",
+    "@plaa/metascraper-helpers": "^5.3.0",
     "jsdom": "~15.1.0",
     "lodash": "~4.17.11",
     "memoize-one": "~5.0.4",
     "readability": "github:mozilla/readability"
   },
   "devDependencies": {
-    "metascraper": "latest",
+    "@plaa/metascraper": "latest",
     "mocha": "latest",
     "nyc": "latest",
     "snap-shot": "latest",

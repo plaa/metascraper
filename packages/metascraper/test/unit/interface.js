@@ -2,7 +2,7 @@
 
 const should = require('should')
 
-const metascraper = require('../..')([require('metascraper-title')()])
+const metascraper = require('../..')([require('@plaa/metascraper-title')()])
 
 it('url is required', async () => {
   try {

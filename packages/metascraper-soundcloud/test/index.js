@@ -5,23 +5,23 @@ const { promisify } = require('util')
 const { resolve } = require('path')
 const fs = require('fs')
 
-const metascraper = require('metascraper')([
-  require('metascraper-soundcloud')(),
-  require('metascraper-author')(),
-  require('metascraper-date')(),
-  require('metascraper-description')(),
-  require('metascraper-image')(),
-  require('metascraper-lang')(),
-  require('metascraper-logo')(),
-  require('metascraper-logo-favicon')(),
-  require('metascraper-publisher')(),
-  require('metascraper-title')(),
-  require('metascraper-url')()
+const metascraper = require('@plaa/metascraper')([
+  require('@plaa/metascraper-soundcloud')(),
+  require('@plaa/metascraper-author')(),
+  require('@plaa/metascraper-date')(),
+  require('@plaa/metascraper-description')(),
+  require('@plaa/metascraper-image')(),
+  require('@plaa/metascraper-lang')(),
+  require('@plaa/metascraper-logo')(),
+  require('@plaa/metascraper-logo-favicon')(),
+  require('@plaa/metascraper-publisher')(),
+  require('@plaa/metascraper-title')(),
+  require('@plaa/metascraper-url')()
 ])
 
 const readFile = promisify(fs.readFile)
 
-describe('metascraper-soundcloud', () => {
+describe('@plaa/metascraper-soundcloud', () => {
   it('song', async () => {
     const html = await readFile(resolve(__dirname, 'fixtures/song.html'))
     const url = 'https://soundcloud.com/beautybrainsp/beauty-brain-swag-bandicoot'

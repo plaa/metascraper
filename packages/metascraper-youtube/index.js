@@ -1,6 +1,6 @@
 'use strict'
 
-const { $filter, author } = require('@metascraper/helpers')
+const { $filter, author } = require('@plaa/metascraper-helpers')
 const isReachable = require('is-reachable')
 const getVideoId = require('get-video-id')
 const pLocate = require('p-locate')
@@ -14,9 +14,7 @@ const THUMBAILS_RESOLUTIONS = [
 ]
 
 const getThumbnailUrl = id => {
-  const urls = THUMBAILS_RESOLUTIONS.map(
-    res => `https://img.youtube.com/vi/${id}/${res}`
-  )
+  const urls = THUMBAILS_RESOLUTIONS.map(res => `https://img.youtube.com/vi/${id}/${res}`)
   return pLocate(urls, isReachable)
 }
 

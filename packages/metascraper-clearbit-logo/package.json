@@ -1,9 +1,12 @@
 {
-  "name": "metascraper-clearbit-logo",
+  "name": "@plaa/metascraper-clearbit-logo",
   "description": "metascraper integration with Clearbit Logo API",
   "homepage": "https://nicedoc.io/microlinkhq/metascraper/packages/metascraper-clearbit-logo",
   "version": "5.3.0",
   "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/microlinkhq/metascraper-clearbit-logo.git"
@@ -14,7 +17,7 @@
   "keywords": [
     "clearbit",
     "logo",
-    "metascraper"
+    "@plaa/metascraper"
   ],
   "dependencies": {
     "got": "~9.6.0"

@@ -5,18 +5,21 @@
   "main": "index.js",
   "private": true,
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "html-metadata": "latest",
     "node-metainspector": "latest",
     "open-graph-scraper": "latest",
     "unfluff": "latest",
-    "metascraper": "latest",
-    "metascraper-author": "latest",
-    "metascraper-date": "latest",
-    "metascraper-description": "latest",
-    "metascraper-image": "latest",
-    "metascraper-logo": "latest",
-    "metascraper-title": "latest",
-    "metascraper-url": "latest"
+    "@plaa/metascraper": "latest",
+    "@plaa/metascraper-author": "latest",
+    "@plaa/metascraper-date": "latest",
+    "@plaa/metascraper-description": "latest",
+    "@plaa/metascraper-image": "latest",
+    "@plaa/metascraper-logo": "latest",
+    "@plaa/metascraper-title": "latest",
+    "@plaa/metascraper-url": "latest"
   }
 }

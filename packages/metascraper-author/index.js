@@ -1,6 +1,6 @@
 'use strict'
 
-const { $filter, author } = require('@metascraper/helpers')
+const { $filter, author } = require('@plaa/metascraper-helpers')
 
 const REGEX_STRICT = /^\S+\s+\S+/
 

@@ -65,7 +65,7 @@ it('add a new rule for a prop that exists', async () => {
     }
   ]
 
-  const metascraper = require('../..')([require('metascraper-image')()])
+  const metascraper = require('../..')([require('@plaa/metascraper-image')()])
 
   const meta = await metascraper({ url, html, rules })
   should(meta.image).be.equal('https://microlink.io/logo.png')

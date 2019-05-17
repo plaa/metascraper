@@ -1,6 +1,6 @@
 'use strict'
 
-const helpers = require('@metascraper/helpers')
+const helpers = require('@plaa/metascraper-helpers')
 const { eq, get, invoke } = require('lodash')
 const Readability = require('readability')
 const memoizeOne = require('memoize-one')

@@ -1,6 +1,6 @@
 'use strict'
 
-const { url: urlFn } = require('@metascraper/helpers')
+const { url: urlFn } = require('@plaa/metascraper-helpers')
 
 /**
  * Wrap a rule with validation and formatting logic.

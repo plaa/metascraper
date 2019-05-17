@@ -1,6 +1,6 @@
 'use strict'
 
-const { $filter, title } = require('@metascraper/helpers')
+const { $filter, title } = require('@plaa/metascraper-helpers')
 
 const wrap = rule => ({ htmlDom }) => {
   const value = rule(htmlDom)

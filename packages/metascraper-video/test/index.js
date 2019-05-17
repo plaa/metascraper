@@ -7,17 +7,15 @@ const { omit } = require('lodash')
 const should = require('should')
 const fs = require('fs')
 
-const metascraper = require('metascraper')([require('..')()])
+const metascraper = require('@plaa/metascraper')([require('..')()])
 
 const readFile = promisify(fs.readFile)
 
-describe('metascraper-video', () => {
+describe('@plaa/metascraper-video', () => {
   describe('video', () => {
     describe('<video />', () => {
       it('single src', async () => {
-        const html = await readFile(
-          resolve(__dirname, 'fixtures/video-src.html')
-        )
+        const html = await readFile(resolve(__dirname, 'fixtures/video-src.html'))
         const url =
           'https://www.theverge.com/2018/1/22/16921092/pentagon-secret-nuclear-bunker-reconstruction-minecraft-cns-miis-model'
         const metadata = await metascraper({ html, url })
@@ -40,9 +38,7 @@ describe('metascraper-video', () => {
     })
 
     it('<source src />', async () => {
-      const html = await readFile(
-        resolve(__dirname, 'fixtures/source-src.html')
-      )
+      const html = await readFile(resolve(__dirname, 'fixtures/source-src.html'))
       const url = 'https://9gag.com/gag/aGjVLDK'
 
       const metadata = await metascraper({ html, url })
@@ -58,27 +54,21 @@ describe('metascraper-video', () => {
 
     describe('by providers', () => {
       it('clips.twitch.tv', async () => {
-        const html = await readFile(
-          resolve(__dirname, 'fixtures/providers/clip.twitch.tv.html')
-        )
+        const html = await readFile(resolve(__dirname, 'fixtures/providers/clip.twitch.tv.html'))
         const url = 'https://clips.twitch.tv/AwkwardBoredWaffleItsBoshyTime'
         const metadata = await metascraper({ html, url })
         snapshot(metadata)
       })
 
       it('play.tv', async () => {
-        const html = await readFile(
-          resolve(__dirname, 'fixtures/providers/play.tv.html')
-        )
+        const html = await readFile(resolve(__dirname, 'fixtures/providers/play.tv.html'))
         const url = 'https://plays.tv/video/5a6f64b1bef69a7fa9/holy-shit'
         const metadata = await metascraper({ html, url })
         snapshot(omit(metadata, ['date']))
       })
 
       it('9gag', async () => {
-        const html = await readFile(
-          resolve(__dirname, 'fixtures/providers/9gag.html')
-        )
+        const html = await readFile(resolve(__dirname, 'fixtures/providers/9gag.html'))
         const url = 'https://9gag.com/gag/abY5Mm9'
         const metadata = await metascraper({ html, url })
         should(metadata.video.endsWith('.mp4')).be.true()
@@ -88,9 +78,7 @@ describe('metascraper-video', () => {
 
   describe('image', () => {
     it('src:poster', async () => {
-      const html = await readFile(
-        resolve(__dirname, 'fixtures/source-poster.html')
-      )
+      const html = await readFile(resolve(__dirname, 'fixtures/source-poster.html'))
       const url = 'https://gfycat.com/gifs/detail/timelyhealthyarmadillo'
       const metadata = await metascraper({ html, url })
       snapshot(metadata)

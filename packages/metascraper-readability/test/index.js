@@ -4,9 +4,9 @@ const snapshot = require('snap-shot')
 const path = require('path')
 const fs = require('fs')
 
-const metascraper = require('metascraper')([require('metascraper-readability')()])
+const metascraper = require('@plaa/metascraper')([require('@plaa/metascraper-readability')()])
 
-describe('metascraper-readability', () => {
+describe('@plaa/metascraper-readability', () => {
   describe('.readability', function () {
     it('learnnode.com', async () => {
       const url = 'https://learnnode.com'

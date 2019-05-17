@@ -1,6 +1,6 @@
 'use strict'
 
-const { date, $filter } = require('@metascraper/helpers')
+const { date, $filter } = require('@plaa/metascraper-helpers')
 
 /**
  * Wrap a rule with validation and formatting logic.

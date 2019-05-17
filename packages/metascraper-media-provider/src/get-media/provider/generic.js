@@ -1,6 +1,6 @@
 'use strict'
 
-const debug = require('debug')('metascraper-media-provider:generic')
+const debug = require('debug')('@plaa/metascraper-media-provider:generic')
 const youtubedl = require('@microlink/youtube-dl')
 const { isEmpty } = require('lodash')
 const { promisify } = require('util')
