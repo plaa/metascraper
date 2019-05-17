@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.4.0](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-date/compare/v5.3.0...v5.4.0) (2019-05-17)
+
+
+### Features
+
+* implement JSON-LD retrieval of date ([8a2c7a0](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-date/commit/8a2c7a0))
+
+
+
+
+
 ## [5.2.4](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-date/compare/v5.2.3...v5.2.4) (2019-05-07)
 
 **Note:** Version bump only for package metascraper-date

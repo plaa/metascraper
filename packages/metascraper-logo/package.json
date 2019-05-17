@@ -2,7 +2,7 @@
   "name": "@plaa/metascraper-logo",
   "description": "Get logo property from HTML markup",
   "homepage": "https://nicedoc.io/microlinkhq/metascraper/packages/metascraper-logo",
-  "version": "5.3.0",
+  "version": "5.4.0",
   "main": "index.js",
   "publishConfig": {
     "access": "public"
@@ -19,7 +19,7 @@
     "@plaa/metascraper"
   ],
   "dependencies": {
-    "@plaa/metascraper-helpers": "^5.3.0"
+    "@plaa/metascraper-helpers": "^5.4.0"
   },
   "devDependencies": {
     "mocha": "latest",

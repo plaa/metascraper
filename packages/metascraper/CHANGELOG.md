@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.4.0](https://github.com/microlinkhq/metascraper/compare/v5.3.0...v5.4.0) (2019-05-17)
+
+
+### Features
+
+* add support for <meta itemprop="inLanguage"> ([c6c6e32](https://github.com/microlinkhq/metascraper/commit/c6c6e32))
+* implement JSON-LD retrieval of date ([8a2c7a0](https://github.com/microlinkhq/metascraper/commit/8a2c7a0))
+* implement JSON-LD retrieval of image ([0622039](https://github.com/microlinkhq/metascraper/commit/0622039))
+* implement JSON-LD retrieval of publisher ([69672a9](https://github.com/microlinkhq/metascraper/commit/69672a9))
+* implement JSON-LD retrieval of title ([9db86bd](https://github.com/microlinkhq/metascraper/commit/9db86bd))
+* provide parsed JSON-LD to rules ([8eef818](https://github.com/microlinkhq/metascraper/commit/8eef818))
+
+
+
+
+
 ## [5.2.4](https://github.com/microlinkhq/metascraper/compare/v5.2.3...v5.2.4) (2019-05-07)
 
 

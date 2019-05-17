@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.4.0](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-description/compare/v5.3.0...v5.4.0) (2019-05-17)
+
+
+### Features
+
+* implement JSON-LD retrieval of description ([6be3164](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-description/commit/6be3164))
+
+
+
+
+
 ## [5.2.4](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-description/compare/v5.2.3...v5.2.4) (2019-05-07)
 
 **Note:** Version bump only for package metascraper-description
